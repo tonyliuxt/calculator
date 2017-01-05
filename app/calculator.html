@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="calculatorApp">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Calculator For E-CENTRIC by Tony.Liu</title>
+	<link rel="stylesheet" type="text/css" href="css/calculator.css">
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/calculator.js"></script>
+</head>
+<body>
+	<!-- Start common calculator-->
+    <div ng-controller="calculatorController" class="calculator">
+		<div class="section group result"> <!-- Display the result row -->
+			<div class="col c4of4">{{ calculator.currentDisplay }}</div>
+		</div>
+		<div class="section group"> <!-- Display Operators -->
+			<div ng-click="resetClicked()" class="col c1of4">C</div>
+			<div ng-click="operationButtonClicked('/')" class="col c1of4">÷</div>
+			<div ng-click="operationButtonClicked('*')" class="col c1of4">×</div>
+			<div ng-click="backSpace()" class="col c1of4"><--</div>
+		</div>
+		<div class="section group"> <!-- Display the 1st number row -->
+			<div ng-click="numberClicked(1)" class="col c1of4">1</div>
+			<div ng-click="numberClicked(2)" class="col c1of4">2</div>
+			<div ng-click="numberClicked(3)" class="col c1of4">3</div>
+			<div ng-click="operationButtonClicked('+')" class="col c1of4">+</div>
+		</div>
+		<div class="section group"> <!-- Display the 2nd number row -->
+			<div ng-click="numberClicked(4)" class="col c1of4">4</div>
+			<div ng-click="numberClicked(5)" class="col c1of4">5</div>
+			<div ng-click="numberClicked(6)" class="col c1of4">6</div>
+			<div ng-click="operationButtonClicked('-')" class="col c1of4">-</div>
+		</div>
+		<div class="section group"> <!-- Display the 3rd number row -->
+			<div ng-click="numberClicked(7)" class="col c1of4">7</div>
+			<div ng-click="numberClicked(8)" class="col c1of4">8</div>
+			<div ng-click="numberClicked(9)" class="col c1of4">9</div>
+			<div ng-click="operationButtonClicked('sqrn')" class="col c1of4">√y</div>
+		</div>
+		<div class="section group"> <!-- Display the 3rd number row -->
+			<div ng-click="numberClicked(0)" class="col c1of4">0</div>
+			<div ng-click="numberClicked('.')" class="col c1of4">.</div>
+			<div ng-click="calculateIt()" class="col c1of4">=</div>
+			<div ng-click="operationButtonClicked('sqn')" class="col c1of4">yn</div>
+		</div>
+	</div>
+	<!-- End common calculator -->
+	
+	<!-- Start scientific calculator-->
+	<!-- End scientific calculator-->
+	
+</body>
+</html>

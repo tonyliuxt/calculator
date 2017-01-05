@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="jasmine/jasmine.min.css">
+		<script type="text/javascript" src="jasmine/jasmine.min.js"></script>
+		<script type="text/javascript" src="jasmine/jasmine-html.min.js"></script>
+		<script type="text/javascript" src="jasmine/boot.min.js"></script>
+		<script type="text/javascript" src="../app/js/angular.min.js"></script>
+		<script type="text/javascript" src="../app/js/calculator.js"></script>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+
+	describe('CoreCalculateModule', function () {
+		describe('sum', function () {
+			it('2 + 3 should equal 5', function () {
+				expect(CoreCalculateModule.sum(2, 3)).toBe(5);
+			});	
+		});
+		describe('sum', function () {
+			it('2.2 + 3.2 should equal 5.4', function () {
+				expect(CoreCalculateModule.sum(2.2, 3.2)).toBe(5.4);
+			});	
+		});
+		
+		describe('subtract', function () {
+			it('50 - 70 should equal -20', function () {
+				expect(CoreCalculateModule.subtract(50, 70)).toBe(-20);
+			});	
+		});
+		describe('subtract', function () {
+			it('17.2 - 16.2 should equal 1', function () {
+				expect(CoreCalculateModule.subtract(17.2, 16.2)).toBe(1);
+			});	
+		});
+
+		describe('multiply', function () {
+			it('5 x 7 should equal 35', function () {
+				expect(CoreCalculateModule.multiply(5, 7)).toBe(35);
+			});	
+		});
+		describe('multiply', function () {
+			it('1.2 x 1.2 should equal 1.44', function () {
+				expect(CoreCalculateModule.multiply(1.2, 1.2)).toBe(1.44);
+			});	
+		});
+		
+		describe('divide', function () {
+			it('15 / 3 should equal 5', function () {
+				expect(CoreCalculateModule.divide(15, 3)).toBe(5);
+			});	
+		});
+		describe('divide', function () {
+			it('2 / 0 should equal 0', function () {
+				expect(CoreCalculateModule.divide(2, 0)).toBe(0);
+			});	
+		});
+		describe('divide', function () {
+			it('2.2 / 1.1 should equal 2', function () {
+				expect(CoreCalculateModule.divide(2.2, 1.1)).toBe(2);
+			});	
+		});
+		describe('divide', function () {
+			it('2.2 / 1.1 should equal 2', function () {
+				expect(CoreCalculateModule.divide(2.2, 1.1)).toBe(2);
+			});	
+		});
+		
+		describe('sqrn', function () {
+			it('9 sqrn should equal 3', function () {
+				expect(CoreCalculateModule.sqrn(9, 2)).toBe(3);
+			});	
+		});
+		describe('sqrn', function () {
+			it('1.44 sqrn should equal 1.2', function () {
+				expect(CoreCalculateModule.sqrn(1.44, 2)).toBe(1.2);
+			});	
+		});
+		
+		describe('sqn', function () {
+			it('3 sqn 2 should equal 9', function () {
+				expect(CoreCalculateModule.sqn(3, 2)).toBe(9);
+			});	
+		});
+		describe('sqn', function () {
+			it('1.5 sqn 2 should equal 2.25', function () {
+				expect(CoreCalculateModule.sqn(1.5, 2)).toBe(2.25);
+			});	
+		});
+		describe('sqn', function () {
+			it('6 sqn 3 should equal 216', function () {
+				expect(CoreCalculateModule.sqn(6, 3)).toBe(216);
+			});	
+		});
+	});	
+
+	</script>
+</html>
